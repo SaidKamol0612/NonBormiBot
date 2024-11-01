@@ -1,16 +1,11 @@
 import logging
 import time
 
-from aiogram import Bot, Router, F
-from aiogram.types import CallbackQuery, Message
-from aiogram.fsm.context import FSMContext
+from aiogram import Bot
 
 from app.data.config import TOKEN, AUTHOR
-from app.keyboards import keyboards as kb
-from app.utils import i18n
 
 bot = Bot(TOKEN)
-admin_notify_router = Router()
 
 async def send_comment(user, msg):
         info = 'Comment :'
